@@ -1,0 +1,11 @@
+CREATE TABLE 'Eleves' ( 
+	'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+	'name' TEXT,
+	'cour_id' INTEGER,
+	FOREIGN KEY(cour_id) REFERENCES Cours(id)
+	);
+
+CREATE TABLE 'Cours' (
+	'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+	'name' TEXT
+	);
