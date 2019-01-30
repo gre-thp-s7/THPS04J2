@@ -1,7 +1,7 @@
 .mode column
 .header on
 
-CREATE TABLE 'user' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'name' TEXT);
+CREATE TABLE 'user' ('id_user' INTEGER PRIMARY KEY AUTOINCREMENT, 'name' TEXT);
 INSERT INTO user (name) VALUES ('guillaume');
 INSERT INTO user (name) VALUES ('max');
 INSERT INTO user (name) VALUES ('charles');
@@ -10,7 +10,7 @@ INSERT INTO user (name) VALUES ('yaya');
 SELECT * FROM user;
 
 
-CREATE TABLE 'article' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'name_of_article' TEXT, 'user_id' INTEGER, FOREIGN KEY(user_id) REFERENCES user(id));
+CREATE TABLE 'article' ('id_article' INTEGER PRIMARY KEY AUTOINCREMENT, 'name_of_article' TEXT, 'user_id' INTEGER, FOREIGN KEY(user_id) REFERENCES user(id));
 INSERT INTO article (name_of_article, user_id) VALUES ('télé', '3');
 INSERT INTO article (name_of_article, user_id) VALUES ('chaise de gamer', '5');
 INSERT INTO article (name_of_article, user_id) VALUES ('repose pied', '5');
@@ -21,7 +21,7 @@ INSERT INTO article (name_of_article, user_id) VALUES ('casque DJ', '4');
 SELECT * FROM article;
 
 
-CREATE TABLE 'category' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'title' TEXT);
+CREATE TABLE 'category' ('id_category' INTEGER PRIMARY KEY AUTOINCREMENT, 'title' TEXT);
 INSERT INTO category (title) VALUES ('mobilier');
 INSERT INTO category (title) VALUES ('geekerie');
 INSERT INTO category (title) VALUES ('sextoy');
@@ -47,7 +47,7 @@ INSERT INTO article_category (article_id, category_id) VALUES ('7', '4');
 
 
 
-CREATE TABLE 'tag' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'title' TEXT, 'colour' TEXT);
+CREATE TABLE 'tag' ('id_tag' INTEGER PRIMARY KEY AUTOINCREMENT, 'title' TEXT, 'colour' TEXT);
 INSERT INTO tag (title, colour) VALUES ('jean pierre chevenement', 'beau gosse');
 INSERT INTO tag (title, colour) VALUES ('amazon', 'sont des capitaliste');
 INSERT INTO tag (title, colour) VALUES ('vive le café', 'jus de chaussette');

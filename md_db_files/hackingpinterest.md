@@ -1,13 +1,13 @@
 #hackingpinterest.md
 
 CREATE TABLE 'Users' (
-	'id' INTEGER PRIMARY KEY AUTOINCREMENT, 
+	'id_user' INTEGER PRIMARY KEY AUTOINCREMENT, 
 	'user_name' TEXT
 	);
 
 
 CREATE TABLE 'Pins' (
-	'id' INTEGER PRIMARY KEY AUTOINCREMENT, 
+	'id_pins' INTEGER PRIMARY KEY AUTOINCREMENT, 
 	'Pins_name' TEXT, 
 	'url' INTEGER,
 	user_id INTEGER, 
@@ -18,7 +18,7 @@ CREATE TABLE 'Pins' (
 
 
 CREATE TABLE 'Commentaires' (
-	'id' INTEGER PRIMARY KEY AUTOINCREMENT, 
+	'id_commentaire' INTEGER PRIMARY KEY AUTOINCREMENT, 
 	'commentaire' TEXT, 
 	'user_id' INTEGER, 
 	'pins_id' INTEGER,
